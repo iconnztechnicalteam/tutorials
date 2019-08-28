@@ -4,19 +4,19 @@
    <masterdataPoolUpdate pool="felocations">
       <update group="felocations" key="feloc">
          <data>
-            <entry name = "locationName">
+            <entry name = "locationName1">
                <valstr>DC Office - Main Room</valstr>
             </entry>
-            <entry name = "locationName">
+            <entry name = "locationName2">
                <valstr>DC Office - Lunch Room</valstr>
             </entry>
-            <entry name = "locationName">
+            <entry name = "locationName3">
                <valstr>Shed 1 - Northeast Door</valstr>
             </entry>
-            <entry name = "locationName">
+            <entry name = "locationName4">
                <valstr>Shed 1 - Southeast Door</valstr>
             </entry>
-            <entry name = "locationName">
+            <entry name = "locationName5">
                <valstr>Shed 2 - North Door</valstr>
             </entry>
          </data>
