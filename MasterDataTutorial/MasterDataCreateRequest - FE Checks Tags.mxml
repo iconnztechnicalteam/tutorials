@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
-   <!-- POOL: Fire Extinguisher Locations -->
+   <!-- POOL: Fire Extinguisher Tag Checks -->
    <masterdataPoolUpdate pool="felocations">
       <update group="checkstags" key="checkstags">
          <data>
