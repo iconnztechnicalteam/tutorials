@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
+   <!-- POOL: Fire Extinguisher Locations -->
+   <masterdataPoolUpdate pool="felocations">
+      <update group="checksavail" key="checksavail">
+         <data>
+            <entry name = "check1">
+               <valstr>Fire extinguisher in the assigned location</valstr>
+            </entry>
+            <entry name = "check2">
+               <valstr>Readily accessible, e.g. free to open without obstruction (cabinet hose reels)</valstr>
+            </entry>
+            <entry name = "check3">
+               <valstr>Securely fitted</valstr>
+            </entry>
+            <entry name = "check4">
+               <valstr>Signeage in place</valstr>
+            </entry>
+            <entry name = "check5">
+               <valstr>Operating instructions are ledgible</valstr>
+            </entry>
+         </data>
+      </update>
+   </masterdataPoolUpdate>
+</MovilizerRequest>

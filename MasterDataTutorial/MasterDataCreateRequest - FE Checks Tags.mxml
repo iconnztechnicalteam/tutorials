@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
+   <!-- POOL: Fire Extinguisher Locations -->
+   <masterdataPoolUpdate pool="felocations">
+      <update group="checkstags" key="checkstags">
+         <data>
+            <entry name = "check1">
+               <valstr>Fire extinguisher anti-tamper device is intact</valstr>
+            </entry>
+            <entry name = "check2">
+               <valstr>Maintenance record (white stickers) are present and legible</valstr>
+            </entry>
+            <entry name = "check3">
+               <valstr>Annual inspection tag is firmly attached and current</valstr>
+            </entry>
+         </data>
+      </update>
+   </masterdataPoolUpdate>
+</MovilizerRequest>
