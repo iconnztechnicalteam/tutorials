@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
+   <!-- POOL: Fire Extinguisher Locations11 -->
+   <masterdataPoolUpdate pool="felocations">
+      <update group="felocations" key="feloc">
+         <data>
+            <entry name = "locationName">
+               <valstr>DC Office - Main Room</valstr>
+            </entry>
+            <entry name = "locationName">
+               <valstr>DC Office - Lunch Room</valstr>
+            </entry>
+            <entry name = "locationName">
+               <valstr>Shed 1 - Northeast Door</valstr>
+            </entry>
+            <entry name = "locationName">
+               <valstr>Shed 1 - Southeast Door</valstr>
+            </entry>
+            <entry name = "locationName">
+               <valstr>Shed 2 - North Door</valstr>
+            </entry>
+         </data>
+      </update>
+   </masterdataPoolUpdate>
+</MovilizerRequest>
