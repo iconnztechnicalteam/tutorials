@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovilizerMovelet moveletKey="f6f7df10-67bb-432b-adf5-edbcfa22ab3a" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="1" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" encryptionAlgorithm="" priority="0" moveletDownloadPriority="0" replyUploadPriority="0" syncPriority="NONE" visible="true" filterValue="" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
+  <question key="1" title="Fire Ext. and Hose Reel Inspection Menu" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#1_1" clientKey="" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="29" sortAnswerItemsByClientKey="false">
+      <text>Search Location</text>
+    </answer>
+  </question>
+  <question key="10" title="Inspection Confirmed!" type="0" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#10_1" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+  </question>
+  <question key="2" title="Locations" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#2_1" attributeType="0" nextQuestionKey="3" dummyAnswer="true">
+      <text>Dummy</text>
+    </answer>
+    <text>Select Location to Inspect</text>
+  <onEnterAssignment>
+  	fireExtLocations = queryMasterData($masterdata:'felocations', 'felocations', {}, { "result":"all"; });  
+  	felocs = {};
+  	for (int : fireExtLocations)
+  	{
+  		felocs[int] = fireExtLocations[int]['data']['LocationName'];
+  	}
+    addAnswers($answer:'#2_1', felocs);
+  </onEnterAssignment>
+  </question>
+  <question key="3" title="Start Inspection" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#3_1" nextQuestionKey="4" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="43" sortAnswerItemsByClientKey="false">
+      <text>Inspection Date</text>
+    </answer>
+    <answer key="#3_2" nextQuestionKey="5" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="17" sortAnswerItemsByClientKey="false">
+      <text>Quality Checks - Accessibility</text>
+    </answer>
+    <answer key="#3_3" nextQuestionKey="6" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="42" sortAnswerItemsByClientKey="false">
+      <text>Quality Checks - Tags</text>
+    </answer>
+    <answer key="#3_4" nextQuestionKey="7" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="15" sortAnswerItemsByClientKey="false">
+      <text>Quality Checks - Exterior</text>
+    </answer>
+    <answer key="#3_7" nextQuestionKey="9" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="40" sortAnswerItemsByClientKey="false">
+      <text>Additional Observations</text>
+    </answer>
+    <answer key="#3_5" nextQuestionKey="8" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="1" sortAnswerItemsByClientKey="false">
+      <text>Confirm Inspection</text>
+    </answer>
+    <answer key="#3_6" nextQuestionKey="2" position="6" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="6" sortAnswerItemsByClientKey="false">
+      <text>Cancel Inspection</text>
+    </answer>
+  </question>
+  <question key="4" title="Select Date of Inspection" type="8" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="72" key="#4_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Navigation</text>
+    </answer>
+    <answer attributeType="69" key="#4_2" nextQuestionKey="END" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>2019-07-29¤2019-09-27</text>
+    </answer>
+    <answer attributeType="70" key="#4_3" nextQuestionKey="END" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>2019-08-28</text>
+    </answer>
+  </question>
+  <question key="5" title="Checks for Accessibility" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#5_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Fire extinguisher in the assigned location</text>
+    </answer>
+    <answer key="#5_2" nextQuestionKey="END" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Readily accessible, e.g. free to open without obstruction (cabinet hose reels)</text>
+    </answer>
+    <answer key="#5_3" nextQuestionKey="END" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Securely fitted</text>
+    </answer>
+    <answer key="#5_4" nextQuestionKey="END" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Signeage in place</text>
+    </answer>
+    <answer key="#5_5" nextQuestionKey="END" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Operating instructions are ledgible</text>
+    </answer>
+  </question>
+  <question key="6" title="Checks for Tags" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#6_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Fire extinguisher anti-tamper device is intact</text>
+    </answer>
+    <answer key="#6_2" nextQuestionKey="END" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Maintenance record (white stickers) are present and legible</text>
+    </answer>
+    <answer key="#6_3" nextQuestionKey="END" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Annual inspection tag is firmly attached and current</text>
+    </answer>
+  </question>
+  <question key="7" title="Checks for Exterior" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#7_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>sset is clean</text>
+    </answer>
+    <answer key="#7_2" nextQuestionKey="END" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>ree of corrosion or visual damag</text>
+    </answer>
+    <answer key="#7_3" nextQuestionKey="END" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>ot blocked or damaged, i.e. discharge nozzle, hoses</text>
+    </answer>
+    <answer key="#7_4" nextQuestionKey="END" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>ree from cracking, damage or deterioration (hose reels)</text>
+    </answer>
+    <answer key="#7_5" nextQuestionKey="END" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>onnected to supply and on (hose reels</text>
+    </answer>
+    <answer key="#7_6" nextQuestionKey="END" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Pressurized water supply</text>
+    </answer>
+  </question>
+  <question key="8" title="Confirmation of Inspection Completion" type="11" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="73" key="#8_1" nextQuestionKey="10" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <answer key="#8_2" nextQuestionKey="10" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <answer attributeType="68" key="#8_3" nextQuestionKey="10" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <text>I confirm that I have inspected the asset in this location based on the checklists and standards set forth by the organisation</text>
+  </question>
+  <question key="9" title="Additional Observations" type="3" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#9_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <text>Provide any additional observations not part of the inspection quality checklists</text>
+  </question>
+  <name>Create Request for Fire Extinguisher and Hose Reel Checklist</name>
+  <masterdata pool="felocations" group="felocations" systemId="16980001" />
+</MovilizerMovelet>

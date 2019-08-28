@@ -2,28 +2,52 @@
 <MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
    <!-- POOL: Fire Extinguisher Exterior Checks -->
    <masterdataPoolUpdate pool="felocations">
-      <update group="checksext" key="checksext">
+      <update group="checksext" key="checksext1">
          <data>
             <entry name = "check1">
                <valstr>Asset is clean</valstr>
-            </entry>
+             </entry>
+         </data>
+      </update>
+      <update group="checksext" key="checksext1">
+         <data>
             <entry name = "check2">
                <valstr>Free of corrosion or visual damage</valstr>
             </entry>
+         </data>
+      </update>
+       <update group="checksext" key="checksext1">
+         <data>
             <entry name = "check3">
                <valstr>Within operable range on the pressure indicator (fire extinguishers)</valstr>
             </entry>
-            <entry name = "check3">
+         </data>
+      </update>
+      <update group="checksext" key="checksext1">
+         <data>
+            <entry name = "check4">
                <valstr>Not blocked or damaged, i.e. discharge nozzle, hoses</valstr>
             </entry>
-            <entry name = "check3">
+         </data>
+      </update>
+      <update group="checksext" key="checksext1">
+         <data>
+            <entry name = "check5">
                <valstr>Free from cracking, damage or deterioration (hose reels)</valstr>
             </entry>
-            <entry name = "check3">
+         </data>
+      </update>
+      <update group="checksext" key="checksext1">
+         <data>
+            <entry name = "check6">
                <valstr>Connected to supply and on (hose reels)</valstr>
             </entry>
-            <entry name = "check3">
-               <valstr>Pressurized (water supply), i.e. water flows through the reel and out of the nozzle, when the nozzle is opened, then closed and hose depressurized with the stop valve is turned off, (hose reels)</valstr>
+         </data>
+      </update>
+      <update group="checksext" key="checksext1">
+         <data>
+            <entry name = "check7">
+               <valstr>Pressurized water supply</valstr>
             </entry>
          </data>
       </update>
