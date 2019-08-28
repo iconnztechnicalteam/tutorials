@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MovilizerMovelet moveletKey="f6f7df10-67bb-432b-adf5-edbcfa22ab3a" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="1" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" encryptionAlgorithm="" priority="0" moveletDownloadPriority="0" replyUploadPriority="0" syncPriority="NONE" visible="true" filterValue="" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
+<MovilizerMovelet moveletKey="a5070d03-286d-490f-a68e-b37d6d95cd5d" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="1" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" encryptionAlgorithm="" priority="0" moveletDownloadPriority="0" replyUploadPriority="0" syncPriority="NONE" visible="true" filterValue="" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
   <question key="1" title="Fire Ext. and Hose Reel Inspection Menu" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#1_1" clientKey="" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="29" sortAnswerItemsByClientKey="false">
       <text>Search Location</text>
@@ -8,12 +8,15 @@
   <question key="10" title="Inspection Confirmed!" type="0" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#10_1" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
   </question>
+  <question key="11" title="Take a photo of the Asset" type="10" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#11_1" nextQuestionKey="8" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+  </question>
   <question key="2" title="Locations" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
-    <answer key="#2_1" attributeType="0" nextQuestionKey="3" dummyAnswer="true">
+    <answer attributeType="0" key="#2_1" nextQuestionKey="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="true" sortAnswerItemsByClientKey="false">
       <text>Dummy</text>
     </answer>
     <text>Select Location to Inspect</text>
-  <onEnterAssignment>
+    <onEnterAssignment>
   	fireExtLocations = queryMasterData($masterdata:'felocations', 'felocations', {}, { "result":"all"; });  
   	felocs = {};
   	for (int : fireExtLocations)
@@ -39,7 +42,7 @@
     <answer key="#3_7" nextQuestionKey="9" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="40" sortAnswerItemsByClientKey="false">
       <text>Additional Observations</text>
     </answer>
-    <answer key="#3_5" nextQuestionKey="8" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="1" sortAnswerItemsByClientKey="false">
+    <answer key="#3_5" nextQuestionKey="11" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="1" sortAnswerItemsByClientKey="false">
       <text>Confirm Inspection</text>
     </answer>
     <answer key="#3_6" nextQuestionKey="2" position="6" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="6" sortAnswerItemsByClientKey="false">
@@ -115,6 +118,6 @@
     <answer key="#9_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
     <text>Provide any additional observations not part of the inspection quality checklists</text>
   </question>
-  <name>Create Request for Fire Extinguisher and Hose Reel Checklist</name>
-  <masterdata pool="felocations" group="felocations" systemId="16980001" />
+  <name>Fire Extinguisher and Hose Reel Checklist</name>
+  <masterdata pool="felocations" group="felocations" systemId="16980001" orphanTTL="-1"/>
 </MovilizerMovelet>
