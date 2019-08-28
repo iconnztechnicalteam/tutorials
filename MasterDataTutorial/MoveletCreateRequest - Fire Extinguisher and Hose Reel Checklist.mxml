@@ -56,24 +56,54 @@
         <text>I hereby declare that the I personally inspected the asset today</text>
       </question>
       <syncDownloadAssignment>
-                pool                = $masterdata:'stock'; 
+                pool                = $masterdata:'felocations'; 
                 group               = 'felocations';                
                 filterConfig        = {};                  
                 $local:returnConfig = {'result' : 'all';};
-                $local:entryName    = 'productName';      
+                $local:entryName    = 'Locations';      
                     
-                $local:loadMasterdata = function(myPool, myGroup, myFilter, myReturn, myEntry, $ref:myMasterData)
+                $local:loadMasterdata = function(myPool, myGroup, myFilter, myReturn, myEntry, $ref:fexLocations)
                 {
-                    allMasterData = queryMasterdata(myPool, myGroup, myFilter, myReturn);
+                    allFeLocations = queryMasterdata(myPool, myGroup, myFilter, myReturn);
                      
-                    for(i : allMasterData)
+                    for(i : allFeLocations)
                     {
-                        myMasterData[i] = allMasterData[i]['data'][myEntry];
+                        fexLocations[i] = allMasterData[i]['data'][myEntry];
                     }
                 };
             </syncDownloadAssignment>
       <name>Fire Extinguisher and Hose Reel Inspection Register</name>
       <masterdata pool="felocations" systemId="16980002" />
+      <onMasterdataChange>
+                <!-- Apply to all groups in the pool -->
+                <filter pool="felocations" group="felocations" />
+                <trigger>
+                    function (pool, group, key, op)
+                    {
+                        <!-- 1: Execute on master data record updates -->
+                        if (op == 1)
+                        {
+                            <!-- on master data record update: update only the relevant record -->
+                            updatedMD = getMasterdata(pool, key);
+                            $local:masterData[key] = updatedMD['data'][$local:entryName];
+                        }
+                        <!-- 2: Execute on master data record deletion -->
+                        if (op == 2)
+                        {
+                            <!-- on master data record deletion: null only the relevant values -->
+                            $local:masterData[key] = null;
+                        }
+                        <!-- 3: Execute on master data group deletion -->
+                        if (op == 3)
+                        {
+                            <!-- on master data group deletion: reset array and query master data again -->
+                            $local:masterData = null;
+                            group = null;
+                            call($local:loadMasterdata)(pool, group, filterConfig, $local:returnConfig, $local:entryName, $local:masterData);
+                        }
+                    }
+                </trigger>
+            </onMasterdataChange>
     </movelet>
   </moveletSet>
 </MovilizerRequest>
