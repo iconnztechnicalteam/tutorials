@@ -2,7 +2,7 @@
 <MovilizerRequest xmlns="http://movilitas.com/movilizer/v16" requestTrackingKey="" systemId="${#Project#SystemID}" systemPassword="${#Project#Password}" numResponses="1000" synchronousResponse="true" useAutoAcknowledge="true">
    <!-- POOL: Fire Extinguisher Locations -->
    <masterdataPoolUpdate pool="felocations">
-      <update group="checksavail" key="checksavail">
+      <update group="checksaccess" key="checksaccess">
          <data>
             <entry name = "check1">
                <valstr>Fire extinguisher in the assigned location</valstr>
