@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovilizerMovelet moveletKey="59efe15d-97db-4a63-9e59-6f5e98c94470" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="20" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" priority="0" syncPriority="NONE" visible="true" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
+  <question key="1" title="Start Inspection" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#1_1" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="43" sortAnswerItemsByClientKey="false">
+      <text>Date of Inspection</text>
+    </answer>
+    <answer key="#1_2" nextQuestionKey="3" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="12" sortAnswerItemsByClientKey="false">
+      <text>Select Location of Rack</text>
+    </answer>
+    <answer key="#1_3" nextQuestionKey="9" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="44" sortAnswerItemsByClientKey="false">
+      <text>Inspection Steps</text>
+    </answer>
+    <answer key="#1_4" nextQuestionKey="5" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="40" sortAnswerItemsByClientKey="false">
+      <text>Additional Observations</text>
+    </answer>
+    <answer key="#1_6" nextQuestionKey="6" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="1" sortAnswerItemsByClientKey="false">
+      <text>Confirm Inspection</text>
+    </answer>
+    <answer key="#1_7" nextQuestionKey="END" position="6" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="6" sortAnswerItemsByClientKey="false">
+      <text>Cancel Inspection</text>
+    </answer>
+  </question>
+  <question key="10" title="Are beams overloaded? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#10_1" nextQuestionKey="11" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Where two beams connect at an upright, the beam connectors should remain reasonably parallel.  If racking is overloaded or has occurred previously, the beam connectors will form a `V’.  This is a quick and easy guide</text>
+    </answer>
+  </question>
+  <question key="11" title="Are beams damaged? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#11_1" nextQuestionKey="12" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check for obvious signs of beams being hit by a pallet or forklift. Damaged beams must be replaced where the damage exceeds allowable tolerances </text>
+    </answer>
+  </question>
+  <question key="12" title="Are beam connectors correctly seated in the upright?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#12_1" nextQuestionKey="13" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Examine beams to ensure that the beam connectors are fully seated in the upright</text>
+    </answer>
+  </question>
+  <question key="13" title="Are safety clips in place in all beam connectors?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#13_1" nextQuestionKey="14" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Safety clips prevent beams from being accidentally dislodged. If the racking design includes safety clips, then a ll connectors must have a safety clip of the correct size and type correctly fitted</text>
+    </answer>
+  </question>
+  <question key="14" title="Are drive-in rack pallet support brackets damaged?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#14_1" nextQuestionKey="15" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Examine pallet support brackets for damage or twisting</text>
+    </answer>
+  </question>
+  <question key="15" title="Are drive-in rack pallet support rails damaged?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#15_1" nextQuestionKey="16" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check pallet support rails for impact damage or flattening at the returns.  Also check that bolts attaching the rail to the support brackets are tight and not damaged</text>
+    </answer>
+  </question>
+  <question key="16" title="Are pallets fully retained on pallet rails? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#16_1" nextQuestionKey="17" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Is the clearance between the rails sufficiently close enough to prevent pallets falling between the rails?  </text>
+    </answer>
+  </question>
+  <question key="17" title="Are uprights damaged? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#17_1" nextQuestionKey="18" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>If an upright shows significant damage, or is twisted or contains splits or cracks, then replace it or splice a new section in. If the upright is damaged and is to be replaced, the footplate must be inspected as it may also have sustained damage  </text>
+    </answer>
+  </question>
+  <question key="18" title="Are splices in good condition? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#18_1" nextQuestionKey="19" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check the condition of any splices.  They must be free from damage or cracks and be above the first beam level; i.e. not close to the ground where they take most of the weight.  If uprights are joined with welds check the condition of the welds to ensure the weld is not cracking  </text>
+    </answer>
+  </question>
+  <question key="19" title="Are racking braces damaged? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#19_1" nextQuestionKey="20" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Replace bent horizontal or diagonal braces.  For bracing, the member deviation from a 1 m long straight edge in either plane should not exceed 10 mm </text>
+    </answer>
+  </question>
+  <question key="2" title="Select Date of Inspection" type="8" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="72" key="#2_1" nextQuestionKey="1" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Navigation</text>
+    </answer>
+    <answer attributeType="70" key="#2_3" nextQuestionKey="END" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>2019-08-29</text>
+    </answer>
+    <onEnterAssignment>
+            setCustomizingProperty($customizing:'screen.calendar.dayview.enabled', false);
+            setCustomizingProperty($customizing:'screen.calendar.weekview.enabled', false);
+    </onEnterAssignment>
+  </question>
+  <question key="20" title="Is plan or spine bracing loose or damaged? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#20_1" nextQuestionKey="21" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Drive in rack has plan bracing at the top of the racks and spine bracing at the rear.  Plan and spine bracing must be free of damage and all bracing, including cables (where fitted) must at all times be clear of product  </text>
+    </answer>
+  </question>
+  <question key="21" title="Are base plates damaged or twisted? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#21_1" nextQuestionKey="22" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check base plates and fastenings for impact damage or twisting</text>
+    </answer>
+  </question>
+  <question key="22" title="Are levelling plates correctly aligned?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#22_1" nextQuestionKey="23" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Plates are often used with the base plates for levelling the rack.  Check to ensure plates are correctly aligned</text>
+    </answer>
+  </question>
+  <question key="23" title="Are pallets in the rack in a safe and serviceable condition? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#23_1" nextQuestionKey="24" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>The condition of the pallets and loads stored in the racks is important.  Check pallets to ensure they are in good condition.  Also check loads to ensure loads are stable on the pallet</text>
+    </answer>
+  </question>
+  <question key="24" title="Are floor fixings installed?" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#24_1" nextQuestionKey="25" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check that floor fixings are installed and are not damaged.  Replace as required.  If the floor fixing has been damaged, it is likely that the footplate will have also received damage and may need replacing.  One bolt is normal in ea ch footplate, although back to back or double deep racking will commonly have bolts in the perimeter footplates only.  Two or three bolts close together in a footplate may result in weakening of the floor</text>
+    </answer>
+  </question>
+  <question key="25" title="Are uprights vertical within acceptable limits? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#25_1" nextQuestionKey="1" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check using sprit level for out - of - plumb both front - back and side - side</text>
+    </answer>
+  </question>
+  <question key="3" title="Select Area" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#3_1" nextQuestionKey="4" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="true" sortAnswerItemsByClientKey="false">
+      <text>Dummy</text>
+    </answer>
+    <onEnterAssignment>
+        areas = queryMasterData($masterdata:'felocations', 'area', {}, { "result":"all"; });  
+        areaList = {};
+        for (int : areas)
+        {
+            areaList[int] = areas[int]['data']['Area'];
+        }
+        addAnswers($answer:'#3_1', areaList);
+   </onEnterAssignment>
+    <search spacerMode="0" caseSensitive="false" textCondition="0"/>
+  </question>
+  <question key="4" title="Select Location" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#4_1" nextQuestionKey="1" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="true" sortAnswerItemsByClientKey="false">
+      <text>Dummy</text>
+    </answer>
+    <onEnterAssignment>
+        fireExtLocations = queryMasterData($masterdata:'felocations', 'felocations', {}, { "result":"all"; });  
+        felocs = {};
+        for (int : fireExtLocations)
+        {
+            felocs[int] = fireExtLocations[int]['data']['LocationName'];
+        }
+        addAnswers($answer:'#4_1', felocs);
+  </onEnterAssignment>
+    <search spacerMode="0" caseSensitive="false" textCondition="0"/>
+  </question>
+  <question key="5" title="Additional Observations" type="3" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#5_1" nextQuestionKey="1" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <text>Provide any additional observations not part of the inspection steps</text>
+  </question>
+  <question key="6" title="Take a photo of the rack" type="10" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#6_1" nextQuestionKey="7" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+  </question>
+  <question key="7" title="Confirmation of Inspection Completion" type="11" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="73" key="#7_1" nextQuestionKey="8" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <answer key="#7_2" nextQuestionKey="8" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <answer attributeType="68" key="#7_3" nextQuestionKey="8" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <text>I confirm that I have inspected the item in this location based on the checklist and standards set forth by the organisation</text>
+  </question>
+  <question key="8" title="Inspection Confirmed!" type="0" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#8_1" nextQuestionKey="END" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+  </question>
+  <question key="9" title="Racking load capacity (SWL) clearly displayed? " type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#9_1" nextQuestionKey="10" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Check that the bays conform to the SWL signs provided by the designer / installer, and that the racks have not been altered</text>
+    </answer>
+  </question>
+  <name>Racking Visual Inspection Checklist</name>
+  <masterdata pool="felocations" systemId="16980001" orphanTTL="-1"/>
+</MovilizerMovelet>
