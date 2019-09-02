@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MovilizerMovelet moveletKey="b16c6e36-4310-4e34-9dde-2305162ffbec" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="1" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" encryptionAlgorithm="" priority="0" moveletDownloadPriority="0" replyUploadPriority="0" syncPriority="NONE" visible="true" filterValue="" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
+<MovilizerMovelet moveletKey="09e5c226-8279-4e04-a7e1-0752e4676a8c" moveletKeyExtension="" namespace="" mafAppSpace="" privateNamespace="true" icon="1" moveletType="MULTI" metaMoveletType="NONE" initialQuestionKey="1" transactional="false" encryptionAlgorithm="" priority="0" moveletDownloadPriority="0" replyUploadPriority="0" syncPriority="NONE" visible="true" filterValue="" moveletVersion="0" xmlns="http://movilitas.com/movilizer/v16">
   <question key="1" title="Fire Ext. and Hose Reel Inspection Menu" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#1_1" clientKey="" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="29" sortAnswerItemsByClientKey="false">
       <text>Search Location</text>
@@ -14,9 +14,33 @@
   <question key="12" title="List down any actions done to the asset" type="3" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#12_1" nextQuestionKey="3" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
   </question>
+  <question key="13" title="Select Current Location" type="15" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="34" key="#13_1" nextQuestionKey="14" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>MAP;STANDARD;ACTIVE;driving</text>
+    </answer>
+    <onEnterAssignment>
+        gpsStatus = startGPSCapturing(100000.00, 100000.00, 100000.00);
+        gpsArray = getGPSCoordinates();
+        currLatitude = gpsArray[0]['timestamp']['lt'];
+        currLongitude = gpsArray[0]['timestamp']['lg'];
+        $global:coordinates = concat('GPS Coordinates: ', currLatitude, ', ', CurrLongitude);
+    </onEnterAssignment>
+  </question>
+  <question key="14" title="Enter Name for Current Location" type="5" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="0" key="#14_1" clientKey="" nextQuestionKey="3" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Location Name</text>
+      <predefinedValue/>
+    </answer>
+    <onEnterAssignment>
+    	setSubText($answer:'#14_1', null, $global:coordinates);
+    </onEnterAssignment>
+  </question>
   <question key="2" title="Locations" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer attributeType="0" key="#2_1" nextQuestionKey="3" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="true" sortAnswerItemsByClientKey="false">
       <text>Dummy</text>
+    </answer>
+    <answer key="#2_2" nextQuestionKey="13" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="12" sortAnswerItemsByClientKey="false">
+      <text>Enter Current Location</text>
     </answer>
     <text>Select Location to Inspect</text>
     <onEnterAssignment>
@@ -79,10 +103,10 @@
       <text>Securely fitted</text>
     </answer>
     <answer key="#5_4" nextQuestionKey="3" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>Signeage in place</text>
+      <text>Signage in place</text>
     </answer>
     <answer key="#5_5" nextQuestionKey="3" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>Operating instructions are ledgible</text>
+      <text>Operating instructions are legible</text>
     </answer>
   </question>
   <question key="6" title="Checks for Tags" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
@@ -98,22 +122,22 @@
   </question>
   <question key="7" title="Checks for Exterior" type="4" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#7_1" nextQuestionKey="3" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>sset is clean</text>
+      <text>Asset is clean</text>
     </answer>
     <answer key="#7_2" nextQuestionKey="3" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>ree of corrosion or visual damag</text>
+      <text>Free of corrosion or visual damag</text>
     </answer>
     <answer key="#7_3" nextQuestionKey="3" position="2" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>ot blocked or damaged, i.e. discharge nozzle, hoses</text>
+      <text>Not blocked or damaged, i.e. discharge nozzle, hoses</text>
     </answer>
     <answer key="#7_4" nextQuestionKey="3" position="3" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>ree from cracking, damage or deterioration (hose reels)</text>
+      <text>Free from cracking, damage or deterioration (hose reels)</text>
     </answer>
     <answer key="#7_5" nextQuestionKey="3" position="4" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>onnected to supply and on (hose reels</text>
+      <text>Connected to supply and on (hose reels)</text>
     </answer>
     <answer key="#7_6" nextQuestionKey="3" position="5" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
-      <text>Pressurized water supply</text>
+      <text>Pressurised water supply</text>
     </answer>
   </question>
   <question key="8" title="Confirmation of Inspection Completion" type="11" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
