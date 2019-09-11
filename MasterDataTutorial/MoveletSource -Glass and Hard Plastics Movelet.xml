@@ -4,6 +4,9 @@
     <answer key="#1_1" nextQuestionKey="2" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="true" sortAnswerItemsByClientKey="false">
       <text>Dummy</text>
     </answer>
+    <answer key="#1_2" nextQuestionKey="11" position="1" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="12" sortAnswerItemsByClientKey="false">
+      <text>Pin Current Location</text>
+    </answer>
     <text>Select Location to Inspect</text>
     <onEnterAssignment>
         fireExtLocations = queryMasterData($masterdata:'felocations', 'felocations', {}, { "result":"all"; });  
@@ -18,6 +21,15 @@
   </question>
   <question key="10" title="Inspection Confirmed!" type="0" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#10_1" nextQuestionKey="1" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+  </question>
+  <question key="11" title="Current Location" type="20" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer key="#11_1" nextQuestionKey="12" position="0" action="NONE" onScreenValueChangeEventTrigger="SYNCHRONOUS" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false"/>
+    <text>Set your current location as inspection location using the pin below</text>
+  </question>
+  <question key="12" title="Location Name" type="5" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
+    <answer attributeType="0" key="#12_1" clientKey="0" nextQuestionKey="2" position="0" colIndex="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" sortAnswerItemsByClientKey="false">
+      <text>Provide name for current location</text>
+    </answer>
   </question>
   <question key="2" title="Start Inspection" type="6" backNavigationAllowed="true" sortAnswersByClientKey="false" tableRowDetailsEnabled="true" tableOptionsEnabled="true">
     <answer key="#2_1" nextQuestionKey="3" position="0" action="NONE" onScreenValueChangeEventTrigger="NONE" timerBasedScreenValueChangeEvent="false" dummyAnswer="false" icon="43" sortAnswerItemsByClientKey="false">
